@@ -7,7 +7,41 @@
 }
 
 body {
-   : color 0.3s;    line-height: 1.6;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0d1b2a; /* Azul escuro */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 .header nav ul li a:hover {
@@ -20,7 +54,7 @@ body {
 
 /* Hero */
 .hero {
-    background: url('assets/escritorio.jpg') center/cover no-repeat;
+    background: url('assets/mesario.jpg') center/cover no-repeat;
     height: 100vh;
     position: relative;
     display: flex;
@@ -175,36 +209,3 @@ footer {
         font-size: 2rem;
     }
 }
-    color: #333;
-    background-color: #f8f9fa;
-}
-
-/* Header */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #0d1b2a; /* Azul escuro */
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    z-index: 1000;
-}
-
-.header .logo img {
-    height: 50px;
-}
-
-.header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
