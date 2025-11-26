@@ -1,0 +1,38 @@
+/* Variáveis do Figma convertidas */
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: #ffffff;
+  --secondary: #ececf0;
+  --secondary-foreground: #030213;
+  --muted-foreground: #717182;
+  --border: rgba(0,0,0,0.1);
+  --radius: 0.625rem;
+  --text-base: 1rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+}
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+}
+body { margin:0; font-family: Arial, sans-serif; background: var(--background); color: var(--foreground); }
+.container { width:min(1100px,92%); margin:auto; }
+.navbar { background: var(--primary); color: var(--primary-foreground); }
+.nav-content { display:flex; align-items:center; gap:1rem; padding:0.75rem 0; }
+.brand { font-weight:600; }
+.menu { margin-left:auto; display:flex; gap:1rem; }
+.menu-link { color: var(--primary-foreground); text-decoration:none; font-size: var(--text-base); }
+.hero { padding:3rem 0; border-bottom:1px solid var(--border); }
+.hero-title { font-size: var(--text-3xl); font-weight:600; }
+.hero-subtitle { color: var(--muted-foreground); max-width:70ch; }
+.hero-actions { display:flex; gap:1rem; margin-top:1rem; }
+.btn-primary { background: var(--foreground); color: var(--background); padding:0.6rem 1rem; border-radius: var(--radius); text-decoration:none; }
+.btn-outline { border:1px solid var(--border); color: var(--foreground); padding:0.6rem 1rem; border-radius: var(--radius); text-decoration:none; }
+.section { padding:2rem 0; }
+.grid-areas { display:grid; grid-template-columns:1.2fr 0.8fr; gap:2rem; }
+.card { display:flex; gap:1rem; align-items:center; padding:1rem; border:1px solid var(--border); border-radius: var(--radius); }
+.avatar { width:96px; height:96px; border-radius:50%; }
+.footer { border-top:1px solid var(--border); padding:2rem 0; color: var(--muted-foreground); }
