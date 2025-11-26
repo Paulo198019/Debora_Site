@@ -1,99 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Débora Kulczar Advocacia</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonte (ajuste para a do Figma se for outra) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="container nav-content">
-      <h1 class="logo">Débora Kulczar</h1>
-      <nav id="menu" class="menu">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="#inicio" class="brand">
+        <img src="./logo.jpg" alt="Logo Débora Kulczar" />
+      </a>
+      <nav id="menu" class="nav">
         <a href="#inicio">Início</a>
         <a href="#sobre">Sobre</a>
         <a href="#areas">Áreas</a>
         <a href="#equipe">Equipe</a>
-        <a href="#contato">Contato</a>
+        <a href="#contato" class="btn btn-primary">Contato</a>
       </nav>
-      <button id="menu-toggle" class="menu-toggle">☰</button>
+      <button id="menu-toggle" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="inicio" class="hero">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h2>Excelência em Advocacia e Consultoria Jurídica</h2>
-        <p>Soluções jurídicas estratégicas e personalizadas com ética, transparência e compromisso.</p>
-        <div class="hero-buttons">
-          <a href="#contato" class="btn primary">Agendar Consulta</a>
-          <a href="#areas" class="btn secondary">Áreas de Atuação</a>
+  <main>
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Excelência em Advocacia e Consultoria Jurídica</h1>
+          <p>Oferecemos soluções jurídicas estratégicas e personalizadas com ética, transparência e compromisso.</p>
+          <div class="hero-actions">
+            <a href="#contato" class="btn btn-primary">Agendar consulta</a>
+            <a href="#areas" class="btn btn-secondary">Áreas de atuação</a>
+          </div>
+        </div>
+        <figure class="hero-media">
+          <img src="./banner.jpg" alt="Escritório de advocacia" width="1200" height="800" loading="eager" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="section">
+      <div class="container section-narrow">
+        <h2>Quem somos</h2>
+        <p>
+          Atuamos com dedicação e estratégia para oferecer soluções jurídicas personalizadas. Nosso compromisso é garantir
+          excelência no atendimento e resultados eficazes, com foco na ética e na transparência.
+        </p>
+      </div>
+    </section>
+
+    <!-- Áreas de atuação -->
+    <section id="areas" class="section section-alt">
+      <div class="container">
+        <h2>Áreas de atuação</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Direito de Família</h3>
+            <p>Atuação dedicada em causas familiares com foco em soluções humanas e efetivas.</p>
+          </article>
+          <article class="card">
+            <h3>Direito do Trabalho</h3>
+            <p>Assessoria estratégica em relações trabalhistas e litígios.</p>
+          </article>
+          <article class="card">
+            <h3>Direito Previdenciário</h3>
+            <p>Consultoria e processos para benefícios e direitos previdenciários.</p>
+          </article>
+          <article class="card">
+            <h3>Direito do Consumidor</h3>
+            <p>Defesa de direitos do consumidor e mediação de conflitos.</p>
+          </article>
+          <article class="card">
+            <h3>Direito Cível</h3>
+            <p>Demandas cíveis com estratégia processual e foco em resultados.</p>
+          </article>
         </div>
       </div>
-      <img src="assets/escritorio.jpg" alt="Imagem do Escritório" class="hero-img">
-    </div>
-  </section>
+    </section>
 
-  <!-- Sobre -->
-  <section id="sobre" class="sobre">
-    <div class="container text-center">
-      <h2>Quem Somos</h2>
-      <p>Atuamos com dedicação e estratégia para oferecer soluções jurídicas personalizadas. Nosso compromisso é garantir excelência no atendimento e resultados eficazes.</p>
-    </div>
-  </section>
-
-  <!-- Áreas -->
-  <section id="areas" class="areas">
-    <div class="container">
-      <h2 class="text-center">Áreas de Atuação</h2>
-      <div class="grid">
-        <div class="card"><h3>Direito de Família</h3><p>Atuação dedicada em causas familiares com foco em soluções humanas e efetivas.</p></div>
-        <div class="card"><h3>Direito do Trabalho</h3><p>Assessoria estratégica em relações trabalhistas e litígios.</p></div>
-        <div class="card"><h3>Direito Previdenciário</h3><p>Consultoria e processos para benefícios e direitos previdenciários.</p></div>
-        <div class="card"><h3>Direito do Consumidor</h3><p>Defesa de direitos do consumidor e mediação de conflitos.</p></div>
-        <div class="card"><h3>Direito Cível</h3><p>Demandas cíveis com estratégia processual e foco em resultados.</p></div>
+    <!-- Equipe -->
+    <section id="equipe" class="section">
+      <div class="container">
+        <h2>Advogada responsável</h2>
+        <div class="profile">
+          <img src="./perfil.jpg" alt="Dra. Débora Kulczar" width="320" height="400" loading="lazy" />
+          <div class="profile-text">
+            <h3>Dra. Débora Kulczar</h3>
+            <p>OAB 479600-SP</p>
+            <p>Atendimento personalizado, foco em resultados e respeito à confidencialidade.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Equipe -->
-  <section id="equipe" class="equipe">
-    <div class="container text-center">
-      <h2>Advogada Responsável</h2>
-      <img src="assets/debora.jpg" alt="Dra. Débora Kulczar" class="profile-img">
-      <h3>Dra. Débora Kulczar</h3>
-      <p>Advogada – OAB 479600-SP</p>
-    </div>
-  </section>
-
-  <!-- Contato -->
-  <section id="contato" class="contato">
-    <div class="container">
-      <h2 class="text-center">Entre em Contato</h2>
-      <form id="contact-form" class="form">
-        <input type="text" placeholder="Nome" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Mensagem" rows="5" required></textarea>
-        <button type="submit" class="btn primary">Enviar</button>
-      </form>
-      <div class="contact-info text-center">
-        <p><strong>Endereço:</strong> Rua Exemplo, 123 - São Paulo/SP</p>
-        <p><strong>Telefone:</strong> (11) 99999-9999</p>
-        <p><strong>E-mail:</strong> contato@deborakulczar.com</p>
-        <p><strong>Horário:</strong> Seg - Sex: 9h às 18h</p>
+    <!-- Destaque secundário (opcional) -->
+    <section class="section section-alt">
+      <div class="container hero-secondary">
+        <div class="hero-secondary-text">
+          <h2>Atuação moderna e estratégica</h2>
+          <p>
+            Unimos experiência, tecnologia e olhar humano para entregar soluções jurídicas consistentes e efetivas.
+          </p>
+        </div>
+        <figure class="hero-secondary-media">
+          <img src="./mesario_novo.jpg" alt="Atendimento jurídico moderno" width="1200" height="800" loading="lazy" />
+        </figure>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section">
+      <div class="container">
+        <h2>Entre em contato</h2>
+        <form id="contact-form" class="form" novalidate>
+          <label>
+            Nome
+            <input type="text" name="nome" placeholder="Seu nome" required />
+          </label>
+          <label>
+            E-mail
+            <input type="email" name="email" placeholder="seu@email.com" required />
+          </label>
+          <label>
+            Mensagem
+            <textarea name="mensagem" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+        </form>
+
+        <div class="contact-info">
+          <p><strong>Endereço:</strong> São Paulo/SP</p>
+          <p><strong>Telefone:</strong> (11) 99999-9999</p>
+          <p><strong>E-mail:</strong> contato@deborakulczar.com</p>
+          <p><strong>Horário:</strong> Seg - Sex: 9h às 18h</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="footer">
-    © 2025 Débora Kulczar Advocacia. Todos os direitos reservados.
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Débora Kulczar Advocacia. Todos os direitos reservados.</p>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- JS -->
+  <script src="./script.js"></script>
 </body>
 </html>
