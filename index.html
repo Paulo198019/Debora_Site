@@ -2,62 +2,229 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Debora - Landing Page</title>
-    style.css
-    <link rel="icon" href="assets/img/favicon.svg- Header -->
-    <header class="header">
-        <div class="logo">
-            assets/img/perfil.svg
-            <h1>Debora</h1>
-        </div>
-        <nav class="nav">
-            #sobreSobre</a>
-            #servicosServiços</a>
-            <a href="#contato">
-        </nav>
-    </header>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seu Projeto | Serviços de Alta Performance</title>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-text">
-            <h2>Transforme sua presença online</h2>
-            <p>Landing page moderna e responsiva para destacar seus serviços.</p>
-            <div class="hero-buttons">
-                #servicosConheça os serviços</a>
-                #contatoFale conosco</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="assets/img/banner   </div>
-    </section>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Grid Section -->
-    <section id="servicos" class="grid-section">
-        <h3>Nossos Serviços</h3>
-        <div class="grid">
-            <div class="card">
-                <h4>Design Responsivo</h4>
-                <p>Layouts adaptáveis para qualquer dispositivo.</p>
-            </div>
-            <div class="card">
-                <h4>SEO Otimizado</h4>
-                <p>Melhore sua visibilidade nos buscadores.</p>
-            </div>
-            <div class="card">
-                <h4>Integração Fácil</h4>
-                <p>Conecte sua página com ferramentas essenciais.</p>
-            </div>
-        </div>
-    </section>
+  <style>
+    :root{
+      --clr: #0d0d0d;          /* fundo escuro */
+      --acc1: #00ff95;          /* verde neon */
+      --acc2: #ff0055;          /* rosa neon */
+      --txt:  #ffffff;
+      --sub:  #b3b3b3;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--clr);color:var(--txt);line-height:1.6;}
+    a{text-decoration:none;color:inherit;}
+    img{max-width:100%;display:block;}
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 Debora. Todos os direitos reservados.</p>
-    </footer>
+    /* NAV */
+    header{
+      position:fixed;top:0;left:0;width:100%;
+      background:rgba(13,13,13,.85);
+      backdrop-filter:blur(10px);
+      z-index:999;
+      padding:1rem 2rem;
+      display:flex;align-items:center;justify-content:space-between;
+    }
+    .logo{font-weight:700;font-size:1.2rem;letter-spacing:1px;}
+    nav ul{list-style:none;display:flex;gap:2rem;}
+    nav li a{position:relative;padding:.25rem 0;}
+    nav li a::after{
+      content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;
+      background:var(--acc1);transition:.3s;
+    }
+    nav li a:hover::after{width:100%;}
 
-    script.js</script>
-</body>
-</html>
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      display:flex;align-items:center;justify-content:center;
+      text-align:center;
+      padding:0 1rem;
+      background:linear-gradient(135deg,var(--clr) 0%, #111 100%);
+    }
+    .hero h1{font-size:clamp(2.2rem, 5vw, 4rem);font-weight:700;margin-bottom:1rem;}
+    .hero p{font-size:1.1rem;color:var(--sub);max-width:600px;margin:0 auto 2rem auto;}
+    .btn{
+      display:inline-block;
+      padding:.9rem 2.2rem;
+      background:var(--acc1);
+      color:var(--clr);
+      font-weight:600;
+      border-radius:30px;
+      transition:.3s;
+    }
+    .btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,255,149,.35);}
+    .btn-outline{
+      background:transparent;
+      border:2px solid var(--acc2);
+      color:var(--acc2);
+      margin-left:1rem;
+    }
+    .btn-outline:hover{background:var(--acc2);color:var(--txt);}
 
+    /* SERVIÇOS */
+    #servicos{
+      padding:6rem 1rem;
+      max-width:1100px;margin:auto;
+    }
+    .sec-title{
+      font-size:2.2rem;font-weight:700;
+      text-align:center;margin-bottom:3.5rem;
+      position:relative;
+    }
+    .sec-title::after{
+      content:'';display:block;width:60px;height:4px;
+      background:var(--acc1);margin:.6rem auto 0;
+    }
+    .cards{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:2rem;
+    }
+    .card{
+      background:#1a1a1a;
+      border-radius:12px;
+      padding:2rem 1.5rem;
+      transition:.3s;
+      position:relative;
+      overflow:hidden;
+    }
+    .card::before{
+      content:'';position:absolute;top:0;left:0;width:100%;height:4px;
+      background:var(--acc1);transform:scaleX(0);transform-origin:left;transition:.4s;
+    }
+    .card:hover{transform:translateY(-7px);}
+    .card:hover::before{transform:scaleX(1);}
+    .card h3{font-size:1.3rem;margin-bottom:.7rem;}
+    .card p{color:var(--sub);font-size:.95rem;}
+
+    /* CONTATO */
+    #contato{
+      background:#111;
+      padding:5rem 1rem;
+      text-align:center;
+    }
+    #contato h2{margin-bottom:1rem;}
+    #contato p{max-width:600px;margin:0 auto 2rem auto;color:var(--sub);}
+    .social{
+      display:flex;gap:1.2rem;justify-content:center;margin-top:1.5rem;
+    }
+    .social a{
+      width:44px;height:44px;border-radius:50%;
+      background:#1a1a1a;display:grid;place-items:center;
+      transition:.3s;
+    }
+    .social a:hover{background:var(--acc1);color:var(--clr);}
+
+    /* FOOTER */
+    footer{
+      padding:2rem 1rem;text-align:center;font-size:.85rem;color:var(--sub);
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      nav ul{gap:1.2rem;}
+      .hero h1{font-size:2.4rem;}
+      .btn-outline{margin-left:0;margin-top:1rem;display:block;width:fit-content;margin-inline:auto;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <div class="logo">SeuLogo</div>
+    <nav>
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="hero">
+    <div>
+      <h1>Soluções digitais que <span style="color:var(--acc1);">aceleram</span> seu negócio</h1>
+      <p>Entregamos sites, apps e automações com performance de ponta e design impecável.</p>
+      <a href="#servicos" class="btn">Ver serviços</a>
+      <a href="#contato" class="btn btn-outline">Fale conosco</a>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <h2 class="sec-title">Conheça os serviços</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Desenvolvimento Web</h3>
+        <p>Sites institucionais, landing pages, e-commerces e sistemas web sob medida com tecnologias modernas.</p>
+      </div>
+      <div class="card">
+        <h3>Aplicativos Mobile</h3>
+        <p>Apps nativos e híbridos para iOS e Android com interface fluida e publicação nas stores.</p>
+      </div>
+      <div class="card">
+        <h3>Automação & Integrações</h3>
+        <p>Conectamos plataformas, criamos bots e APIs que economizam horas de trabalho manual.</p>
+      </div>
+      <div class="card">
+        <h3>Consultoria & UX</h3>
+        <p>Análise de performance, otimização de conversão e redesign para resultados mensuráveis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <h2>Fale conosco</h2>
+    <p>Vamos transformar sua ideia em realidade. Entre em contato pelo formulário ou redes sociais.</p>
+    <a href="mailto:contato@seudominio.com" class="btn">contato@seudominio.com</a>
+    <div class="social">
+      <a href="#" aria-label="WhatsApp">WA</a>
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="LinkedIn">IN</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 SeuNome. Todos os direitos reservados.
+  </footer>
+  <!-- WhatsApp float -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .wa-float{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25d366;
+      color:#fff;
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      font-size:28px;
+      box-shadow:0 4px 12px rgba(0,0,0,.3);
+      z-index:1000;
+      transition:.3s;
+    }
+    .wa-float:hover{transform:scale(1.1);}
+  </style>
+
+E, no <body>, adicione bem no final (antes do </body>):
+
+
+  <!-- Botão WhatsApp fixo -->
+  <a class="wa-float" href="https://wa.me/5511922228326?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20serviços!"
+     target="_blank" aria-label="Chamar no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
