@@ -1,87 +1,223 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BPC/LOAS - Débora Kulczar Advocacia</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPC/LOAS Negado? A Decisão do INSS Não é Final!</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root{
+      --dark: #0d0d0d;
+      --light: #ffffff;
+      --accent: #ff0055;
+      --green: #00ff95;
+      --gray: #b3b3b3;
+      --card: #1a1a1a;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--dark);color:var(--light);line-height:1.6;}
+    img{max-width:100%;display:block;}
+    a{text-decoration:none;color:inherit;}
+    .btn{
+      display:inline-block;
+      padding:.9rem 2.2rem;
+      background:var(--accent);
+      color:var(--light);
+      font-weight:600;
+      border-radius:30px;
+      transition:.3s;
+      border:none;cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(255,0,85,.35);}
+    .container{max-width:1100px;margin:auto;padding:0 1rem;}
+
+    /* NAV */
+    .nav{
+      position:fixed;top:0;left:0;width:100%;
+      background:rgba(13,13,13,.85);backdrop-filter:blur(10px);
+      z-index:999;padding:1rem 0;
+    }
+    .nav .container{display:flex;align-items:center;justify-content:space-between;}
+    .logo{font-weight:700;font-size:1.2rem;letter-spacing:1px;}
+
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      display:flex;align-items:center;justify-content:center;
+      text-align:center;padding:6rem 1rem 3rem;
+      background:linear-gradient(135deg,var(--dark) 0%, #111 100%);
+    }
+    .hero h1{font-size:clamp(2.2rem, 5vw, 4rem);font-weight:700;margin-bottom:1rem;}
+    .hero p{font-size:1.1rem;color:var(--gray);max-width:600px;margin:0 auto 2rem auto;}
+
+    /* VIDEO */
+    .video-box{
+      margin:3rem auto 0;
+      max-width:700px;
+      aspect-ratio:16/9;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,.5);
+    }
+
+    /* BENEFÍCIOS */
+    #beneficios{padding:5rem 0;}
+    .sec-title{
+      font-size:2.2rem;font-weight:700;text-align:center;margin-bottom:3.5rem;position:relative;
+    }
+    .sec-title::after{
+      content:'';display:block;width:60px;height:4px;background:var(--accent);margin:.6rem auto 0;
+    }
+    .benefits{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;
+    }
+    .benefit{
+      background:var(--card);border-radius:12px;padding:2rem 1.5rem;text-align:center;
+      transition:.3s;
+    }
+    .benefit:hover{transform:translateY(-7px);}
+    .benefit i{font-size:2.2rem;color:var(--green);margin-bottom:1rem;}
+    .benefit h3{margin-bottom:.7rem;font-size:1.25rem;}
+
+    /* DEPOIMENTOS */
+    #depoimentos{padding:4rem 0;background:#111;}
+    .depo{
+      background:var(--card);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;max-width:700px;margin-inline:auto;
+    }
+    .stars{color:var(--green);}
+    .depo p{color:var(--gray);font-style:italic;margin-top:.5rem;}
+
+    /* FORM */
+    #contato{padding:4rem 0;text-align:center;}
+    .form{
+      max-width:500px;margin:2rem auto 0;display:flex;flex-direction:column;gap:1rem;
+    }
+    .form input, .form textarea{
+      padding:1rem;border-radius:8px;border:none;background:#222;color:var(--light);font-size:1rem;
+    }
+    .form input::placeholder, .form textarea::placeholder{color:#777;}
+
+    /* WHATS FLOAT */
+    .wa-float{
+      position:fixed;bottom:20px;right:20px;
+      background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;
+      display:grid;place-items:center;font-size:28px;
+      box-shadow:0 4px 12px rgba(0,0,0,.3);z-index:1000;transition:.3s;
+    }
+    .wa-float:hover{transform:scale(1.1);}
+
+    /* FOOTER */
+    footer{padding:2rem 0;text-align:center;font-size:.85rem;color:var(--gray);}
+  </style>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="logo">DÉBORA KULCZAR ADVOCACIA</div>
-      <nav class="menu">
-        <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#sobre">Sobre Nós</a></li>
-          <li><a href="#blog">Blog</a></li>
-        </ul>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <div class="logo">SeuNome Advocacia</div>
+      <nav>
+        <a href="#beneficios">Como Atuamos</a>
+        <a href="#depoimentos">Resultados</a>
+        <a href="#contato">Falar com Especialista</a>
       </nav>
-      <a href="https://wa.me/5511922228326" class="cta-header">Falar com um Especialista Agora</a>
     </div>
   </header>
 
-  <section id="inicio" class="hero">
+  <!-- HERO -->
+  <section class="hero">
     <div class="container">
-      <div class="hero-content">
-        <h1 class="executivo">BPC/LOAS: Receba o Benefício Que É Seu Direito</h1>
-        <h2>Idosos e pessoas com deficiência têm direito a 1 salário mínimo mensal garantido por lei.</h2>
-        <p>Atendimento rápido, online e sem burocracia em todo o Brasil. Entre em contato.</p>
-        <a href="https://wa.me/5511922228326" class="cta-principal">🟢 Fale com um Advogado Especialista Agora</a>
-      </div>
+      <h1>BPC/LOAS NEGADO? Saiba Por Que a Decisão do INSS Não é a Palavra Final!</h1>
+      <p>O BPC foi indeferido? Entenda o caminho legal para reverter a negativa e buscar uma nova avaliação pericial do seu direito.</p>
+      <a href="#contato" class="btn">Solicite uma Análise Técnica do Seu Caso</a>
 
-      <div class="hero-media">
-        <div class="ratio-box">
-          <iframe id="heroVideo"
-            src="https://player.vimeo.com/video/1144156273?autoplay=1&muted=0&loop=1&autopause=0&dnt=1&title=0&byline=0&portrait=0&playsinline=1"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            title="Vídeo Institucional"></iframe>
-          <button id="unmuteBtn" class="unmute-banner hidden" aria-label="Ativar som">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10v4h4l5 5V5L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4.03v8.06A4.5 4.5 0 0 0 16.5 12zm0-8v2a8 8 0 0 1 0 12v2c3.53-1.57 6-5.1 6-9s-2.47-7.43-6-9z"/></svg>
-            Ativar som
-          </button>
+      <!-- VIDEO -->
+      <div class="video-box">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/COLOQUE_O_ID" 
+                title="Explicação sobre BPC/LOAS" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section id="beneficios">
+    <div class="container">
+      <h2 class="sec-title">O que faremos pela sua defesa</h2>
+      <div class="benefits">
+        <div class="benefit">
+          <i class="fas fa-search"></i>
+          <h3>Análise Técnica Detalhada</h3>
+          <p>Investigamos a fundo o motivo do indeferimento do INSS, como erro no cálculo de renda familiar ou falha na avaliação da condição de deficiência ou idade.</p>
+        </div>
+        <div class="benefit">
+          <i class="fas fa-gavel"></i>
+          <h3>Ajuizamento Estratégico</h3>
+          <p>Em muitos casos, o caminho mais indicado após a análise é o ajuizamento de uma Ação Judicial.</p>
+        </div>
+        <div class="benefit">
+          <i class="fas fa-handshake"></i>
+          <h3>Orientação Completa</h3>
+          <p>Agir com estratégia e no prazo legal é essencial para a defesa dos seus direitos.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="servicos" class="servicos">
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos">
     <div class="container">
-      <h2>Conheça Nossos Serviços Essenciais</h2>
-      <div class="servicos-grid">
-        <div class="servico-card"><span class="icone">📄</span><h3>Orientação para Solicitação</h3><p>Suporte completo para dar entrada no benefício com segurança.</p></div>
-        <div class="servico-card"><span class="icone">🧐</span><h3>Análise de Documentos</h3><p>Verificação detalhada dos requisitos e documentos necessários.</p></div>
-        <div class="servico-card"><span class="icone">🔍</span><h3>Acompanhamento do Processo</h3><p>Monitoramento contínuo até a concessão do benefício.</p></div>
-        <div class="servico-card"><span class="icone">⚖️</span><h3>Recurso de Benefício Negado</h3><p>Atuação especializada para recorrer de negativas do INSS.</p></div>
+      <h2 class="sec-title">Quem já reverteram a negativa</h2>
+
+      <div class="depo">
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p>“Meu BPC tinha sido negado duas vezes. Em 4 meses a ação judicial já tinha decisão favorável. Hoje recebo tranquilo e ainda recebi os atrasados.”</p>
+        <strong>— Márcia R., SP</strong>
+      </div>
+
+      <div class="depo">
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p>“Fizeram toda análise sem custo e me explicaram cada passo. Recebi a carta de concessão ontem. Valeu muito a pena!”</p>
+        <strong>— João Carlos, RJ</strong>
       </div>
     </div>
   </section>
 
-  <section id="sobre" class="sobre">
+  <!-- FORM / CONTATO -->
+  <section id="contato">
     <div class="container">
-      <h2>A Liderança que Impulsiona Nossa Estratégia</h2>
-      <div class="img-wrapper">
-        <img src="advogada.jpg" alt="Profissional do escritório">
-      </div>
-      <h3>Dra. Débora Kulczar | OAB/SP 479600</h3>
-      <p>Especialista em Direito Previdenciário, dedicada à defesa dos direitos de idosos e pessoas com deficiência, garantindo acesso ao Benefício de Prestação Continuada (LOAS) com segurança e eficiência.</p>
+      <h2 class="sec-title">Solicite sua Análise Técnica Gratuita</h2>
+      <p>Precisa de orientação jurídica especializada sobre a negativa do seu BPC/LOAS?</p>
+
+      <form class="form" action="https://formsubmit.co/seuemail@dominio.com" method="POST">
+        <input type="text" name="nome" placeholder="Seu nome completo" required>
+        <input type="tel" name="telefone" placeholder="WhatsApp (11) 99999-9999" required>
+        <input type="email" name="email" placeholder="Seu melhor e-mail" required>
+        <textarea name="mensagem" rows="4" placeholder="Conte-nos como foi a negativa do INSS"></textarea>
+        <button type="submit" class="btn">Quero Minha Análise</button>
+      </form>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="cta-final">Pronto para garantir seu benefício? Fale agora com nosso time.</div>
-    <div class="container">
-      <div class="footer-columns">
-        <div class="footer-column"><h4>Contato</h4><p>WhatsApp: (11) 92222-8326</p><p>E-mail: debora.kulczar@dkulczar.adv.br</p></div>
-        <div class="footer-column"><h4>Endereço</h4><p>Av. Engenheiro Luís Carlos Berrini, Nº 1681<br>Conjunto 111 e 112 - Cidade Monções<br>São Paulo - SP, CEP: 04571-011</p></div>
-      </div>
-      <p class="disclaimer">*Este site é informativo e não substitui a consulta jurídica personalizada.</p>
-    </div>
+  <!-- FOOTER -->
+  <footer>
+    © 2025 SeuNome Advocacia. Todos os direitos reservados.<br>
+    A atuação é feita em todo território nacional.
   </footer>
 
-  <script src="https://player.vimeo.com/api/player.js"></script>
-  <script src="scripts.js" defer></script>
+  <!-- WHATS FLOAT -->
+  <a class="wa-float" href="https://wa.me/5511922228326?text=Ol%C3%A1%21%20Meu%20BPC%2FLOAS%20foi%20negado%20e%20quero%20saber%20como%20reverter."
+     target="_blank" aria-label="Chamar no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
 </body>
 </html>
