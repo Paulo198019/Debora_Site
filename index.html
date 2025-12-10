@@ -1,87 +1,66 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BPC/LOAS - Débora Kulczar Advocacia</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="header">
-    <div class="container">
-      <div class="logo">DÉBORA KULCZAR ADVOCACIA</div>
-      <nav class="menu">
-        <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#sobre">Sobre Nós</a></li>
-          <li><a href="#blog">Blog</a></li>
-        </ul>
-      </nav>
-      <a href="https://wa.me/5511922228326" class="cta-header">Falar com um Especialista Agora</a>
-    </div>
-  </header>
 
-  <section id="inicio" class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h1 class="executivo">BPC/LOAS: Receba o Benefício Que É Seu Direito</h1>
-        <h2>Idosos e pessoas com deficiência têm direito a 1 salário mínimo mensal garantido por lei.</h2>
-        <p>Atendimento rápido, online e sem burocracia em todo o Brasil. Entre em contato.</p>
-        <a href="https://wa.me/5511922228326" class="cta-principal">🟢 Fale com um Advogado Especialista Agora</a>
-      </div>
+  <title>BPC/LOAS Negado? – Entenda como reverter a negativa do INSS</title>
+  <meta name="description" content="BPC/LOAS negado? Saiba por que a decisão do INSS não é a palavra final. Entenda o caminho legal para buscar nova perícia e reverter a negativa." />
 
-      <div class="hero-media">
-        <div class="ratio-box">
-          <iframe id="heroVideo"
-            src="https://player.vimeo.com/video/1144156273?autoplay=1&muted=0&loop=1&autopause=0&dnt=1&title=0&byline=0&portrait=0&playsinline=1"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            title="Vídeo Institucional"></iframe>
-          <button id="unmuteBtn" class="unmute-banner hidden" aria-label="Ativar som">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10v4h4l5 5V5L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4.03v8.06A4.5 4.5 0 0 0 16.5 12zm0-8v2a8 8 0 0 1 0 12v2c3.53-1.57 6-5.1 6-9s-2.47-7.43-6-9z"/></svg>
-            Ativar som
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- SEO/OG -->
+  <meta property="og:title" content="BPC/LOAS Negado? – A decisão do INSS não é a palavra final!" />
+  <meta property="og:description" content="Entenda o caminho legal para reverter a negativa e buscar nova avaliação pericial." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://paulo198019.github.io/Debora_Site/" />
+  <meta property="og:image" content="https://paulo198019.github.io/Debora_Site/assets/og-cover.jpg" />
 
-  <section id="servicos" class="servicos">
-    <div class="container">
-      <h2>Conheça Nossos Serviços Essenciais</h2>
-      <div class="servicos-grid">
-        <div class="servico-card"><span class="icone">📄</span><h3>Orientação para Solicitação</h3><p>Suporte completo para dar entrada no benefício com segurança.</p></div>
-        <div class="servico-card"><span class="icone">🧐</span><h3>Análise de Documentos</h3><p>Verificação detalhada dos requisitos e documentos necessários.</p></div>
-        <div class="servico-card"><span class="icone">🔍</span><h3>Acompanhamento do Processo</h3><p>Monitoramento contínuo até a concessão do benefício.</p></div>
-        <div class="servico-card"><span class="icone">⚖️</span><h3>Recurso de Benefício Negado</h3><p>Atuação especializada para recorrer de negativas do INSS.</p></div>
-      </div>
-    </div>
-  </section>
+  https://fonts.googleapis.com
+  https://fonts.gstatic.com
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"   :root{
+      --primary-900:#0b1b3b; /* azul executivo profundo */
+      --primary-800:#102a5a;
+      --primary-700:#123970;
+      --accent-500:#3b82f6;
+      --accent-400:#60a5fa;
+      --neutral-50:#f8fafc;
+      --neutral-100:#eef2f7;
+      --neutral-300:#cbd5e1;
+      --neutral-600:#475569;
+      --neutral-800:#1f2937;
+      --success-500:#22c55e;
+      --danger-500:#ef4444;
+      --shadow-1:0 8px 30px rgba(0,0,0,.22);
+      --shadow-2:0 10px 40px rgba(6,24,44,.35);
+      --radius-xl:18px;
+      --radius-lg:14px;
+      --radius-md:10px;
+      --radius-sm:8px;
+    }
 
-  <section id="sobre" class="sobre">
-    <div class="container">
-      <h2>A Liderança que Impulsiona Nossa Estratégia</h2>
-      <div class="img-wrapper">
-        <img src="advogada.jpg" alt="Profissional do escritório">
-      </div>
-      <h3>Dra. Débora Kulczar | OAB/SP 479600</h3>
-      <p>Especialista em Direito Previdenciário, dedicada à defesa dos direitos de idosos e pessoas com deficiência, garantindo acesso ao Benefício de Prestação Continuada (LOAS) com segurança e eficiência.</p>
-    </div>
-  </section>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
+      color:#e6eefb;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(59,130,246,.15), transparent 60%),
+        radial-gradient(800px 400px at 90% -10%, rgba(16,42,90,.55), transparent 60%),
+        linear-gradient(180deg, var(--primary-900) 0%, #091325 100%);
+      line-height:1.55;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
 
-  <footer class="footer">
-    <div class="cta-final">Pronto para garantir seu benefício? Fale agora com nosso time.</div>
-    <div class="container">
-      <div class="footer-columns">
-        <div class="footer-column"><h4>Contato</h4><p>WhatsApp: (11) 92222-8326</p><p>E-mail: debora.kulczar@dkulczar.adv.br</p></div>
-        <div class="footer-column"><h4>Endereço</h4><p>Av. Engenheiro Luís Carlos Berrini, Nº 1681<br>Conjunto 111 e 112 - Cidade Monções<br>São Paulo - SP, CEP: 04571-011</p></div>
-      </div>
-      <p class="disclaimer">*Este site é informativo e não substitui a consulta jurídica personalizada.</p>
-    </div>
-  </footer>
+    .container{width:min(1120px, 92%); margin-inline:auto}
 
-  <script src="https://player.vimeo.com/api/player.js"></script>
-  <script src="scripts.js" defer></script>
-</body>
-</html>
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      background:linear-gradient(180deg, rgba(8,17,34,.9), rgba(8,17,34,.6));
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0;}
+    .brand{display:flex; align-items:center; gap:10px; color:#fff; text-decoration:none; font-weight:800; letter-spacing:.2px; font-size:1.05rem;}
