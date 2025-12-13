@@ -1,3 +1,4 @@
+
 /* Layout base */
 body {margin:0;font-family:Arial,sans-serif;color:#333;line-height:1.6;}
 .container {max-width:1200px;margin:0 auto;padding:0 20px;}
@@ -45,3 +46,9 @@ header .container {display:flex;justify-content:space-between;align-items:center
 .unmute-banner {position:absolute;bottom:12px;left:12px;background:rgba(0,0,0,.6);color:#fff;padding:10px 14px;border-radius:8px;font-size:.95em;display:none;align-items:center;gap:8px;cursor:pointer;}
 .unmute-banner svg {width:18px;height:18px;fill:#fff;}
 .unmute-banner.hidden {display:none !important;}
+
+/* ====== Adição solicitada ====== */
+/* Torna o trecho específico do H1 branco */
+.trecho-branco {
+  color: #ffffff; /* branco puro */
+}
