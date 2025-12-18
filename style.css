@@ -16,4 +16,20 @@
   height: auto;
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.08);
+  
+/* --- FIX: remover texto do href aparecendo no menu --- */
+.header .menu a::before,
+.header .menu.header .menu a {.header .menu a::after {
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  padding: 12px 0;
+}
+.header .menu a:hover { color
+  content: none !important;
+}
+
+/* Garantir aparência limpa do menu */
+
 
