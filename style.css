@@ -1,133 +1,19 @@
 
-/* Reset e tipografia */
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
-               Cantarell, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  color: #e5e7eb;              /* texto claro */
-  background: #0f172a;         /* azul-escuro (slate-900) */
-  line-height: 1.6;
+.sobre .container {
+  text-align: center; /* Centraliza textos e imagem */
 }
 
-/* Container e grid */
-.container { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
-.section { padding: 40px 0; }
-
-/* Header - barra azul com CTA */
-.header {
-  background: #0f4c81;         /* azul do header */
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  position: sticky; top: 0; z-index: 50;
-}
-.logo {
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  color: #fff;
-  padding: 16px 0;
-}
-.menu ul {
-  list-style: none; display: flex; gap: 24px; margin: 0; padding: 0;
-}
-.menu a {
-  color: #d1d5db; text-decoration: none; font-weight: 500; padding: 12px 0;
-}
-.menu a:hover { color: #fff; }
-
-.cta-header {
-  display: inline-block;
-  background: #1e90ff;         /* CTA azul */
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-}
-.cta-header:hover { background: #1a7bd6; }
-
-/* Hero - fundo escuro, títulos grandes */
-.hero {
-  background: #0b1220;         /* tom ainda mais escuro para o hero */
-  padding: 56px 0 28px;
-}
-.executivo {
-  font-size: 44px;
-  line-height: 1.15;
-  margin: 0 0 12px 0;
-  color: #7aa2d2;              /* título azul acinzentado */
-  font-weight: 800;
-}
-.hero h2 {
-  font-size: 24px;
-  margin: 0 0 16px 0;
-  color: #f3f4f6;              /* subtítulo claro */
-  font-weight: 700;
-}
-.hero p {
-  color: #cbd5e1;              /* texto secundário */
-  margin: 0 0 20px 0;
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center  align-items: center;
+  margin: 16px auto;
 }
 
-/* CTA principal (verde) */
-.cta-principal {
-  display: inline-block;
-  background: #22c55e;         /* verde */
-  color: #0b1220;
-  padding: 12px 18px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 700;
-  box-shadow: 0 0 0 4px rgba(34,197,94,0.25);
-}
-.cta-principal:hover {
-  background: #16a34a;
-  box-shadow: 0 0 0 6px rgba(34,197,94,0.18);
-}
-
-/* Hero media - vídeo com borda sutil */
-.ratio-box { position: relative; padding-top: 56.25%; border-radius: 12px; border: 1px solid rgba(122,162,210,0.35); }
-.ratio-box iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 12px; }
-.unmute-banner.hidden { display: none; }
-
-/* Serviços (cards) */
-.servicos { background: #0f172a; padding: 36px 0; }
-.servicos h2 { color: #e5e7eb; font-size: 28px; margin: 0 0 16px; }
-.servicos-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
-}
-.servico-card {
-  background: #111827; color: #e5e7eb;
+.img-wrapper img {
+  max-width: 560px; /* Limita largura */
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px; padding: 16px;
-}
-.servico-card h3 { margin: 8px 0; font-size: 18px; }
-.servico-card p { color: #cbd5e1; }
 
-/* Sobre */
-.sobre { padding: 36px 0; }
-.img-wrapper img { max-width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); }
-.sobre h2 { color: #e5e7eb; margin: 0 0 12px; }
-.sobre h3 { color: #93c5fd; font-weight: 700; margin: 12px 0; }
-
-/* Footer */
-.footer {
-  background: #0b1220;
-  color: #9ca3af;
-  margin-top: 24px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-}
-.footer .cta-final {
-  text-align: center; padding: 16px; background: #0f172a; color: #d1d5db; font-weight: 600;
-}
-.footer-columns {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px; padding: 16px;
-}
-.footer h4 { color: #e5e7eb; margin: 0 0 8px; }
-.disclaimer { font-size: 12px; text-align: center; padding: 16px; color: #6b7280; }
-
-/* Navegação responsiva básica (se necessário) */
-@media (max-width: 768px) {
-  .executivo { font-size: 32px; }
-  .menu ul { flex-wrap: wrap  .menu ul { flex-wrap: wrap; gap: 12px; }
