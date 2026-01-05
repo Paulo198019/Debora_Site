@@ -16,7 +16,16 @@
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'AW-17797944136');
-  </script>
+  </script> 
+!-- Event snippet for Compra conversion page -->
+<script>
+  gtag('event', 'conversion', {
+    'send_to': 'AW-17797944136/_IJJCNfyi9AbEMim3KZC',
+    'value': 1.0,
+    'currency': 'BRL',
+    'transaction_id': '' // opcional: preencha se houver um ID único
+  });
+</script>
 </head>
 <body>
   <!-- Header COM CTA (como no original) -->
@@ -136,4 +145,43 @@
   <script src="https://player.vimeo.com/api/player.js"></script>
   <script src="scripts.js" defer></script>
 </body>
+  
+<!-- Conversão Google Ads ao clicar no WhatsApp -->
+<script>
+  (function() {
+    function fireWhatsappConversion(href) {
+      var navigated = false;
+      var go = function() {
+        if (!navigated) {
+          navigated = true;
+          window.location.href = href;
+        }
+      };
+
+      // Dispara a conversão e, no callback, navega
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17797944136/_IJJCNfyi9AbEMim3KZC',
+        'value': 1.0,
+        'currency': 'BRL',
+        'event_callback': go
+      });
+
+      // Fallback: se o callback não rodar em 700ms, navega mesmo assim
+      setTimeout(go, 700);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var whatsappLinks = document.querySelectorAll('a[href*="wa.me/5511922228326"]');
+
+      whatsappLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          // Evita a navegação imediata para garantir o envio do evento
+          e.preventDefault();
+          var href = link.getAttribute('href');
+          fireWhatsappConversion(href);
+        });
+      });
+    });
+  })();
+</script>
 </html>
